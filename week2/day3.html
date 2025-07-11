@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<div id="paradiv" style="display:none;">
+    <p id="demo2">Niyati Malla</p>
+    <button type="button" onclick="myFunction()">Change style</button>
+</div>  
+
+<script>
+function showPara() {
+    document.getElementById("paradiv").style.display = "block";
+}
+
+function myFunction() {
+    var para = document.getElementById("demo2");
+    para.style.fontSize = "30px"; 
+    para.style.color = "blue";
+}
+</script>
+
+<button type="button" onclick="showPara()">
+        Click me
+</button>
+
+</body>
+</html>
