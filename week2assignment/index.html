@@ -1,70 +1,89 @@
 <!-- Define the document type as HTML5 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mechanic Sathi - Digital Roadside Assistance</title>
+  <style>
+     .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; 
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .service-box {
+      text-align: center;
+    }
+
+    .service-box img {
+      object-fit: cover;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Page heading -->
   <h1>Mechanic Sathi</h1>
-  
+
   <!-- Instruction for users -->
   <p>Click on a service below:</p>
 
-  <!-- Section for Workshop Finder -->
-  <div>
-    <h3>Workshop Finder:</h3>
-        <!-- Image linked to workshop-finder.html page -->
-    <a href="workshop-finder.html">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGykrFBVHyKK7kRkz1eVpcrPcGma0_HNaNMKSMOWuwnq3K13T6LQczr_S-hOebid_JjKg&usqp=CAU" 
-           alt="Workshop Finder" width="300">
-    </a>
+  <!-- First Row-->
+  <div class="image-row">
+
+    <!-- Section for Workshop Finder -->
+    <div class="service-box">
+      <h3>Workshop Finder:</h3>
+      <!-- Image linked-->
+      <a href="workshop-finder.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGykrFBVHyKK7kRkz1eVpcrPcGma0_HNaNMKSMOWuwnq3K13T6LQczr_S-hOebid_JjKg&usqp=CAU" 
+             alt="Workshop Finder">
+      </a>
+    </div>
+
+    <!-- Section for Emergency Tips -->
+    <div class="service-box">
+      <h3>Emergency Tips:</h3>
+      <!-- Image linked-->
+      <a href="emergencytips.html">
+        <img src="images/emergency.png" alt="Emergency Tips">
+      </a>
+    </div>
+
+    <!-- Section for Workshop Registration -->
+    <div class="service-box">
+      <h3>Workshop Registration:</h3>
+      <a href="workshop-registration.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bNjO52PbHP9TIwJoup-r1L10YsNBYBwIymjm5p0nHaB9v8iC2q1NT7g8lRO4RACU_jo&usqp=CAU" 
+             alt="Workshop Registration">
+      </a>
+    </div>
   </div>
 
-  <!-- Section for Mobile App Download -->
-  <div>
-    <h3>Mobile App Download:</h3>
-    
-    <!-- Image linked to mobileapp.html page -->
-    <a href="mobileapp.html">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RQ9hOLSHYroca1SVaTpRR_BV5eI84-mKzBcpf90kPSfmHIf0cjV0RyO4-QIcrVeI71A&usqp=CAU" 
-           alt="Mobile App Download" width="300">
-    </a>
-  </div>
+  <!-- Second Row -->
+  <div class="image-row">
 
-  <!-- Section for Emergency Tips -->
-  <div>
-    <h3>Emergency Tips:</h3>
-    
-    <!-- Image linked to emergencytips.html page -->
-    <a href="emergencytips.html">
-      <img src="images/emergency.png" alt="Emergency Tips" width="300">
-    </a>
-  </div>
+    <!-- Section for Mobile App Download -->
+    <div class="service-box">
+      <h3>Mobile App Download:</h3>
+      <a href="mobileapp.html">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RQ9hOLSHYroca1SVaTpRR_BV5eI84-mKzBcpf90kPSfmHIf0cjV0RyO4-QIcrVeI71A&usqp=CAU" 
+             alt="Mobile App Download">
+      </a>
+    </div>
 
-  <!-- Section for Workshop Registration -->
-  <div>
-    <h3>Workshop Registration:</h3>
-    
-    <!-- Image linked to workshop-registration.html page -->
-    <a href="workshop-registration.html">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bNjO52PbHP9TIwJoup-r1L10YsNBYBwIymjm5p0nHaB9v8iC2q1NT7g8lRO4RACU_jo&usqp=CAU" 
-           alt="Workshop Registration" width="300">
-    </a>
-  </div>
-
-  <!-- Section for Contact & Support -->
-  <div>
-    <h3>Contact & Support</h3>
-    
-    <!-- Image linked to contactsupport.html page -->
-    <a href="contactsupport.html">
-      <img src="images\contact.png" 
-           alt="Contact Support" width="300">
-    </a>
+    <!-- Section for Contact & Support -->
+    <div class="service-box">
+      <h4>Contact & Support</h4>
+      <a href="contactsupport.html">
+        <img src="images/contact.png" alt="Contact Support">
+      </a>
+    </div>
   </div>
 
 </body>
