@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visibility</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 16px;
+      text-align: center;
+      background: #fff;
+      width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .image-container {
+      height: 200px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px 24px;
+      background-color: #38b000;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+
+    .none {
+      display: block;
+    }
+
+    .hidden {
+      visibility: visible;
+    }
+
+    .hidden-image {
+      visibility: hidden;
+    }
+
+    .none-image {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="image-container">
+      <img src="workshop.png" alt="workshop" id="none-img" />
+    </div>
+    <button onclick="document.getElementById('none-img').style.display='none'">Remove</button>
+  </div>
+
+  <div class="card">
+    <div class="image-container">
+      <img src="registration.png" alt="registration" id="hidden-img" />
+    </div>
+    <button onclick="document.getElementById('hidden-img').style.visibility='hidden'">Hide</button>
+  </div>
+
+  <div class="card">
+    <div class="image-container">
+      <img src="emergency.png" alt="emergency" id="reset-img" />
+    </div>
+    <button onclick="resetAll()">Reset All</button>
+  </div>
+
+  <script>
+    function resetAll() {
+      document.getElementById('none-img').style.display = 'block';
+      document.getElementById('hidden-img').style.visibility = 'visible';
+    }
+  </script>
+
+</body>
+</html>
