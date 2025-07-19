@@ -1,0 +1,125 @@
+/* style.css */
+
+/* Reset default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Header Section */
+header {
+  background: #1e3c72;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #3498db;
+}
+
+header h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Main Content Area */
+main {
+  padding: 20px 15px;
+  max-width: 1600px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 4px solid #2c3e50;
+}
+
+main > p {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #3498db;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Service Image Grid */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.service-box {
+  text-align: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  max-width: 380px;
+  min-width: 350px;
+  flex: 1;
+}
+
+.service-box h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.service-box p {
+  color: #2c3e50;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service-box a {
+  text-decoration: none;
+  display: block;
+}
+
+.service-box img {
+  width: 100%; 
+  height: 300px; 
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+}
