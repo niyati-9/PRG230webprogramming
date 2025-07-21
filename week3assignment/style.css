@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Reset default */
 * {
   margin: 0;
@@ -123,3 +121,6 @@ footer p {
   object-fit: cover;
   cursor: pointer;
 }
+
+
+
