@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .outer {
+      width: 100vw;
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .second {
+      width: 90vw;
+      height: 90vh;
+      background-color: #013e15;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .middle {
+      width: 50vw;
+      height: 50vh;
+      background-color: #afd4c3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner {
+      width: 25vw;
+      height: 25vh;
+      background-color: #99ccff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .inner div {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .inner div:nth-child(1) {
+      background-color: #348049;
+    }
+
+    .inner div:nth-child(1):hover {
+      background-color: #33cc99;
+      transform: scale(1.05);
+    }
+
+    .inner div:nth-child(2) {
+      background-color: #024315;
+    }
+
+    .inner div:nth-child(2):hover {
+      background-color: #024315;
+      transform: scale(2.05);
+    }
+
+    .inner div:nth-child(3) {
+      background-color: #4a6851;
+    }
+
+    .inner div:nth-child(3):hover {
+      background-color: #ff4d4d;
+      transform: rotate(2deg) scale(1.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="second">
+        <div class="middle">
+            <div class="inner">
+                <div>Box 1</div>
+                <div>Box 2</div>
+                <div>Box 3</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
