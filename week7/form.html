@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <form>
+    <label for="name">Full Name (required)</label><br>
+    <input id="name" name="name" type="text" required minlength="2" maxlength="80"><br><br>
+
+    <label for="email">Email (required)</label><br>
+    <input id="email" name="email" type="email" required><br><br>
+
+    <label for="phone">Phone</label><br>
+    <input id="phone" name="phone" type="tel" pattern="^\\+?[0-9 \-()]{7,25}$"><br><br>
+
+    <p>Reason for contacting (required):</p>
+    <input type="radio" id="support" name="reason" value="support" required>
+    <label for="support">Support</label>
+    <input type="radio" id="sales" name="reason" value="sales">
+    <label for="sales">Sales</label>
+    <input type="radio" id="feedback" name="reason" value="feedback">
+    <label for="feedback">Feedback</label>
+    <input type="radio" id="other" name="reason" value="other">
+    <label for="other">Other</label><br><br>
+
+    <p>Interests:</p>
+    <input type="checkbox" id="news" name="interests" value="news">
+    <label for="news">Newsletter</label>
+    <input type="checkbox" id="updates" name="interests" value="updates">
+    <label for="updates">Product updates</label>
+    <input type="checkbox" id="events" name="interests" value="events">
+    <label for="events">Events</label><br><br>
+
+    <label for="message">Message (required, max 300 chars)</label><br>
+    <textarea id="message" name="message" rows="5" required minlength="10" maxlength="300"></textarea><br><br>
+
+    <input id="agree" name="agree" type="checkbox" required>
+    <label for="agree">I agree to be contacted regarding my enquiry</label><br><br>
+
+    <button type="submit">Send Message</button>
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
