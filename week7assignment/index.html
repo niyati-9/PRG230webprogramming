@@ -1,0 +1,725 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanic Sathi - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Header with Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/mechsathi.png" alt="Mechanic Sathi Logo" height="55" class="me-2" />
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active fw-medium" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="blogs.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="faq.html">FAQ</a>
+          </li>
+          <!-- Mobile-only Download link -->
+          <li class="nav-item d-lg-none">
+            <a class="nav-link fw-medium" href="download.html">Download App</a>
+          </li>
+        </ul>
+        <!-- Desktop Download button -->
+        <a href="download.html" class="btn btn-primary px-4 fw-semibold glass-effect d-none d-lg-block">
+          <i class="bi bi-download me-2"></i>Download App
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section text-white position-relative overflow-hidden">
+      <div class="hero-particles"></div>
+      <div class="container text-center py-5 position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="hero-badge mb-4">
+              <span class="badge bg-light text-primary px-4 py-2 rounded-pill">
+                <i class="bi bi-award-fill me-2"></i>Nepal's #1 Roadside Companion
+              </span>
+            </div>
+            <h1 class="hero-title display-3 fw-bold mb-4 text-gradient">
+              Your Trusted Roadside Companion
+            </h1>
+            <p class="hero-subtitle fs-4 mb-5 text-white-75 lh-base">
+              Find verified mechanic workshops across Nepal's highways, even offline. 
+              <br class="d-none d-md-block">Get instant help when you need it most.
+            </p>
+            <!-- Hero buttons -->
+            <div class="hero-actions d-flex gap-3 justify-content-center flex-wrap">
+              <a href="download.html" class="btn btn-light btn-lg px-5 fw-semibold download-btn glass-effect">
+                <i class="bi bi-download me-2"></i>Download Now
+                <span class="btn-shine"></span>
+              </a>
+              <a href="features.html" class="btn btn-outline-light btn-lg px-5 fw-semibold glass-border">
+                <i class="bi bi-arrow-right me-2"></i>Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5 bg-light">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-card">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h3 class="stat-number display-5 fw-bold text-primary mb-2" data-count="500">0</h3>
+              <p class="stat-label text-muted mb-0 fw-medium">Verified Workshops</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-card">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h3 class="stat-number display-5 fw-bold text-primary mb-2">24/7</h3>
+              <p class="stat-label text-muted mb-0 fw-medium">Support Available</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-card">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-wifi-off"></i>
+              </div>
+              <h3 class="stat-number display-5 fw-bold text-primary mb-2">100%</h3>
+              <p class="stat-label text-muted mb-0 fw-medium">Offline Capable</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-card">
+              <div class="stat-icon mb-3">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h3 class="stat-number display-5 fw-bold text-primary mb-2" data-count="1000">5000</h3>
+              <p class="stat-label text-muted mb-0 fw-medium">Happy Users</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Overview Section -->
+    <section class="features-section py-5">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-badge badge bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-pill mb-3">
+            <i class="bi bi-star-fill me-2"></i>Premium Features
+          </span>
+          <h2 class="section-title display-4 fw-bold mb-4">Why Choose Mechanic Sathi?</h2>
+          <p class="section-subtitle fs-5 text-muted col-lg-8 mx-auto">
+            Comprehensive roadside assistance designed for Nepal's unique terrain and infrastructure
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">Offline GPS Navigation</h5>
+                <p class="feature-description text-muted">Navigate to the nearest workshop even without internet connectivity. Our offline maps cover all major highways across Nepal.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">Verified Mechanics</h5>
+                <p class="feature-description text-muted">All workshops are verified and rated by real users. Get reliable service from trusted professionals across the country.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">Emergency Calling</h5>
+                <p class="feature-description text-muted">One-tap emergency calling to nearby workshops, towing services, and emergency contacts. Help is just a tap away.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-clock-fill"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">Real-time Updates</h5>
+                <p class="feature-description text-muted">Get live updates on workshop availability, estimated wait times, and service status. Plan your journey better.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-translate"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">Multi-language Support</h5>
+                <p class="feature-description text-muted">Available in Nepali, English, and other local languages. Communicate effectively with mechanics regardless of language barriers.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-card-premium h-100">
+              <div class="feature-card-inner">
+                <div class="feature-icon-wrapper mb-4">
+                  <div class="feature-icon">
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <h5 class="feature-title fw-bold mb-3">User Reviews</h5>
+                <p class="feature-description text-muted">Read authentic reviews and ratings from other travelers. Share your experience to help the community grow stronger.</p>
+                <div class="feature-accent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works py-5 bg-light position-relative">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-badge badge bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-pill mb-3">
+            <i class="bi bi-gear-fill me-2"></i>Simple Process
+          </span>
+          <h2 class="section-title display-4 fw-bold mb-4">How It Works</h2>
+          <p class="section-subtitle fs-5 text-muted">Getting help is simple and straightforward</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="step-card">
+              <div class="step-number-wrapper mb-4">
+                <div class="step-number">
+                  <span>1</span>
+                </div>
+              </div>
+              <div class="step-icon mb-3">
+                <i class="bi bi-download"></i>
+              </div>
+              <h5 class="step-title fw-bold mb-3">Download & Install</h5>
+              <p class="step-description text-muted">Download Mechanic Sathi from Google Play Store or App Store. Install and grant location permissions.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="step-card">
+              <div class="step-number-wrapper mb-4">
+                <div class="step-number">
+                  <span>2</span>
+                </div>
+              </div>
+              <div class="step-icon mb-3">
+                <i class="bi bi-search"></i>
+              </div>
+              <h5 class="step-title fw-bold mb-3">Find Nearby Help</h5>
+              <p class="step-description text-muted">Open the app and instantly see verified workshops near your location, even without internet connection.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="step-card">
+              <div class="step-number-wrapper mb-4">
+                <div class="step-number">
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="step-icon mb-3">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <h5 class="step-title fw-bold mb-3">Navigate & Call</h5>
+              <p class="step-description text-muted">Get turn-by-turn directions to the workshop or call them directly from the app with one tap.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="step-card">
+              <div class="step-number-wrapper mb-4">
+                <div class="step-number">
+                  <span>4</span>
+                </div>
+              </div>
+              <div class="step-icon mb-3">
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5 class="step-title fw-bold mb-3">Get Fixed & Review</h5>
+              <p class="step-description text-muted">Get your vehicle serviced and leave a review to help other travelers in similar situations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-element" style="top: 10%; left: 10%;"></div>
+        <div class="floating-element" style="top: 20%; right: 10%;"></div>
+        <div class="floating-element" style="bottom: 10%; left: 20%;"></div>
+      </div>
+    </section>
+
+    <!-- Coverage Area Section -->
+    <section class="coverage-section py-5">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-badge badge bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-pill mb-3">
+            <i class="bi bi-map-fill me-2"></i>Wide Coverage
+          </span>
+          <h2 class="section-title display-4 fw-bold mb-4">Nationwide Coverage</h2>
+          <p class="section-subtitle fs-5 text-muted">Comprehensive coverage across Nepal's major highways and routes</p>
+        </div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 mb-4" data-aos="fade-right">
+            <div class="coverage-card glass-effect p-4">
+              <h4 class="coverage-title fw-bold text-primary mb-4">
+                <i class="bi bi-signpost-2-fill me-3"></i>Major Highways Covered
+              </h4>
+              <ul class="coverage-list list-unstyled">
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>Mahendra Highway (East-West Highway)</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>Prithvi Highway (Kathmandu-Pokhara)</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>Araniko Highway (Kathmandu-Kodari)</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>BP Highway (Bardibas-Sindhuli-Hetauda)</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>Tribhuvan Highway (Kathmandu-Birgunj)</span>
+                </li>
+                <li class="coverage-item">
+                  <i class="bi bi-check-circle-fill text-success me-3"></i>
+                  <span>Mid Hill Highway</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4" data-aos="fade-left">
+            <div class="coverage-card glass-effect p-4">
+              <h4 class="coverage-title fw-bold text-primary mb-4">
+                <i class="bi bi-wrench-adjustable-circle-fill me-3"></i>Service Types Available
+              </h4>
+              <ul class="coverage-list list-unstyled">
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-wrench text-primary me-3"></i>
+                  <span>General Mechanical Repairs</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-battery-charging text-primary me-3"></i>
+                  <span>Battery & Electrical Services</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-wrench text-primary me-3"></i>
+                  <span>Tire Repair & Replacement</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-truck text-primary me-3"></i>
+                  <span>Towing Services</span>
+                </li>
+                <li class="coverage-item mb-3">
+                  <i class="bi bi-fuel-pump text-primary me-3"></i>
+                  <span>Fuel Delivery</span>
+                </li>
+                <li class="coverage-item">
+                  <i class="bi bi-tools text-primary me-3"></i>
+                  <span>Emergency Roadside Assistance</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <span class="section-badge badge bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-pill mb-3">
+            <i class="bi bi-chat-heart-fill me-2"></i>User Stories
+          </span>
+          <h2 class="section-title display-4 fw-bold mb-4">What Our Users Say</h2>
+          <p class="section-subtitle fs-5 text-muted">Real experiences from real travelers across Nepal</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card-premium h-100">
+              <div class="testimonial-header mb-4">
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+              <p class="testimonial-text mb-4">Saved my trip! My car broke down on the Prithvi Highway at night. Found a 24/7 workshop within minutes using Mechanic Sathi, even without internet.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <span>NP</span>
+                </div>
+                <div class="author-info">
+                  <h6 class="author-name fw-bold mb-0">Nischal Puri</h6>
+                  <small class="author-title text-muted">Business Traveler</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card-premium h-100">
+              <div class="testimonial-header mb-4">
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+              <p class="testimonial-text mb-4">The offline feature is a game-changer. I drive trucks across Nepal and this app has helped me multiple times in remote areas with no network coverage.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <span>RT</span>
+                </div>
+                <div class="author-info">
+                  <h6 class="author-name fw-bold mb-0">Ram Thapa</h6>
+                  <small class="author-title text-muted">Truck Driver</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card-premium h-100">
+              <div class="testimonial-header mb-4">
+                <div class="testimonial-stars mb-3">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="bi bi-quote"></i>
+                </div>
+              </div>
+              <p class="testimonial-text mb-4">Simple, reliable, and accurate. The workshop reviews helped me choose the right place for my motorcycle repair. Excellent service and fair pricing.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <span>KK</span>
+                </div>
+                <div class="author-info">
+                  <h6 class="author-name fw-bold mb-0">Kusum Kunwar</h6>
+                  <small class="author-title text-muted">Tourist Guide</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5 text-white position-relative overflow-hidden">
+      <div class="cta-particles"></div>
+      <div class="container text-center position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="cta-badge mb-4">
+              <span class="badge bg-light bg-opacity-20 text-white px-4 py-2 rounded-pill">
+                <i class="bi bi-lightning-fill me-2"></i>Ready to Get Started?
+              </span>
+            </div>
+            <h2 class="cta-title display-4 fw-bold mb-4">Ready for Safer Journeys?</h2>
+            <p class="cta-subtitle fs-5 mb-5 text-white-75">
+              Join thousands of travelers who trust Mechanic Sathi for their roadside assistance needs. 
+              Download now and travel with confidence.
+            </p>
+            <div class="cta-actions d-flex gap-4 justify-content-center flex-wrap">
+              <a href="download.html" class="btn btn-light btn-lg px-5 fw-semibold download-btn glass-effect">
+                <i class="bi bi-download me-2"></i>Download Free App
+                <span class="btn-shine"></span>
+              </a>
+              <a href="features.html" class="btn btn-outline-light btn-lg px-5 fw-semibold glass-border">
+                <i class="bi bi-info-circle me-2"></i>View All Features
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white py-5 position-relative">
+    <div class="footer-particles"></div>
+    <div class="container position-relative">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-brand mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-wrench-adjustable-circle-fill me-2 text-primary"></i>
+              Mechanic Sathi
+            </h5>
+            <p class="text-light mb-4">Your trusted companion for roadside assistance across Nepal. Built for safer journeys.</p>
+            <div class="social-links">
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h5 class="footer-title fw-bold mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="index.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Home
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="features.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Features
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="blogs.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h5 class="footer-title fw-bold mb-4">Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="faq.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>FAQs
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="contact.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact">
+            <h5 class="footer-title fw-bold mb-4">Get the App</h5>
+            <div class="mb-4">
+              <a href="download.html" class="btn btn-outline-light mb-2 w-100">
+                <i class="bi bi-android me-2"></i>Android App
+              </a>
+              <a href="download.html" class="btn btn-outline-light mb-3 w-100">
+                <i class="bi bi-apple me-2"></i>iOS App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="footer-copyright mb-0">
+            &copy; 2025 Mechanic Sathi. 
+            <span class="text-primary">Budhanilkantha 44600, Kathmandu, Nepal.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Enhanced click feedback for download buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      const downloadBtns = document.querySelectorAll('.download-btn');
+      downloadBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          this.classList.add('clicked');
+          setTimeout(() => {
+            this.classList.remove('clicked');
+          }, 200);
+        });
+      });
+
+      // Animated counter for stats
+      const counters = document.querySelectorAll('[data-count]');
+      const animateCounters = () => {
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-count'));
+          const count = parseInt(counter.innerText);
+          const increment = target / 100;
+          
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(animateCounters, 20);
+          } else {
+            counter.innerText = target.toLocaleString() + '+';
+          }
+        });
+      };
+
+      // Trigger counter animation when stats section is in view
+      const statsSection = document.querySelector('.stats-section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      if (statsSection) {
+        observer.observe(statsSection);
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to navbar
+      const navbar = document.querySelector('.navbar');
+      let lastScroll = 0;
+      
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+      });
+    });
+
+    // Particle animation for hero section
+    function createParticles(container, count = 50) {
+      for (let i = 0; i < count; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 4 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        container.appendChild(particle);
+      }
+    }
+
+    // Initialize particles
+    document.addEventListener('DOMContentLoaded', function() {
+      const heroParticles = document.querySelector('.hero-particles');
+      const ctaParticles = document.querySelector('.cta-particles');
+      const footerParticles = document.querySelector('.footer-particles');
+      
+      if (heroParticles) createParticles(heroParticles, 30);
+      if (ctaParticles) createParticles(ctaParticles, 20);
+      if (footerParticles) createParticles(footerParticles, 15);
+    });
+  </script>
+</body>
+</html>

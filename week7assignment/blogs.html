@@ -1,0 +1,631 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanic Sathi - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Header with Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/mechsathi.png" alt="Mechanic Sathi Logo" height="55" class="me-2" />
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="features.html">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-medium" href="blogs.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="faq.html">FAQ</a>
+          </li>
+          <!-- Mobile-only Download link -->
+          <li class="nav-item d-lg-none">
+            <a class="nav-link fw-medium" href="download.html">Download App</a>
+          </li>
+        </ul>
+        <!-- Desktop Download button -->
+        <a href="download.html" class="btn btn-primary px-4 fw-semibold glass-effect d-none d-lg-block">
+          <i class="bi bi-download me-2"></i>Download App
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+      <section class="contact-hero bg-gradient-primary text-white py-5">
+      <div class="container">
+        <div class="row align-items-center min-vh-50">
+          <div class="col-lg-8 mx-auto text-center">
+            <div class="hero-content">
+              <span class="section-badge badge bg-white bg-opacity-20 text-white px-4 py-2 rounded-pill mb-4">
+                <i class="bi bi-map-fill me-2"></i>Read blog-post
+              </span>
+              <h1 class="display-4 fw-bold mb-4">Travel Tips & Blog</h1>
+              <p class="lead fs-4 mb-5 text-white-75">Expert advice for safer journeys across Nepal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="py-4 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+              <button class="btn btn-outline-primary btn-sm category-btn active" onclick="filterPosts('all')">All Posts</button>
+              <button class="btn btn-outline-primary btn-sm category-btn" onclick="filterPosts('maintenance')">Vehicle Maintenance</button>
+              <button class="btn btn-outline-primary btn-sm category-btn" onclick="filterPosts('safety')">Road Safety</button>
+              <button class="btn btn-outline-primary btn-sm category-btn" onclick="filterPosts('travel')">Travel Tips</button>
+              <button class="btn btn-outline-primary btn-sm category-btn" onclick="filterPosts('emergency')">Emergency Guide</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <div class="card featured-post shadow-lg">
+              <div class="row g-0">
+                <div class="col-md-6">
+                  <div class="featured-image bg-primary d-flex align-items-center justify-content-center text-white" style="height: 300px;">
+                    <i class="bi bi-car-front" style="font-size: 4rem;"></i>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body p-4">
+                    <span class="badge bg-danger mb-2">Featured</span>
+                    <h3 class="card-title fw-bold mb-3">Essential Winter Driving Tips for Nepal's Mountain Roads</h3>
+                    <p class="card-text text-muted mb-3">As winter approaches, driving on Nepal's mountain roads becomes more challenging. Learn essential tips to keep yourself safe during cold weather journeys.</p>
+                    <div class="d-flex align-items-center mb-3">
+                      <small class="text-muted me-3">
+                        <i class="bi bi-calendar me-1"></i>December 15, 2024
+                      </small>
+                      <small class="text-muted me-3">
+                        <i class="bi bi-person me-1"></i>By Admin
+                      </small>
+                      <small class="text-muted">
+                        <i class="bi bi-clock me-1"></i>5 min read
+                      </small>
+                    </div>
+                    <button class="btn btn-primary" onclick="readPost('winter-driving')">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4" id="blogPosts">
+          
+          <!-- Post 1 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="maintenance">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-tools" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Vehicle Maintenance</span>
+                <h5 class="card-title fw-bold">10 Signs Your Car Needs Immediate Attention</h5>
+                <p class="card-text text-muted">Don't ignore these warning signs that could leave you stranded on the highway. Early detection saves money and prevents emergencies.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Dec 10, 2024
+                  </small>
+                  <small class="text-muted">3 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('car-warning-signs')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="safety">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-warning d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-shield-check" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Road Safety</span>
+                <h5 class="card-title fw-bold">Night Driving Safety on Nepal's Highways</h5>
+                <p class="card-text text-muted">Driving at night in Nepal requires extra caution. Learn the essential safety measures to reach your destination safely.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Dec 8, 2024
+                  </small>
+                  <small class="text-muted">4 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('night-driving-safety')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="travel">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-info d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-map" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-info mb-2">Travel Tips</span>
+                <h5 class="card-title fw-bold">Planning Your Road Trip: Essential Checklist</h5>
+                <p class="card-text text-muted">Make your next road trip memorable for all the right reasons. Our comprehensive checklist ensures you're prepared for any situation.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Dec 5, 2024
+                  </small>
+                  <small class="text-muted">6 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('road-trip-checklist')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="emergency">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-danger d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-exclamation-triangle" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">Emergency Guide</span>
+                <h5 class="card-title fw-bold">What to Do When Your Car Breaks Down</h5>
+                <p class="card-text text-muted">A step-by-step emergency guide to handle vehicle breakdowns safely and efficiently, especially in remote areas.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Dec 3, 2024
+                  </small>
+                  <small class="text-muted">5 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('car-breakdown-guide')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 5 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="maintenance">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-success d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-gear" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Vehicle Maintenance</span>
+                <h5 class="card-title fw-bold">Monsoon Vehicle Care: Protecting Your Car</h5>
+                <p class="card-text text-muted">Nepal's monsoon season can be tough on vehicles. Learn how to protect your car from water damage and keep it running smoothly.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Nov 28, 2024
+                  </small>
+                  <small class="text-muted">4 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('monsoon-car-care')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 6 -->
+          <div class="col-lg-4 col-md-6 blog-post" data-category="travel">
+            <div class="card h-100 shadow-sm">
+              <div class="card-img-top bg-primary d-flex align-items-center justify-content-center text-white" style="height: 200px;">
+                <i class="bi bi-compass" style="font-size: 2.5rem;"></i>
+              </div>
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Travel Tips</span>
+                <h5 class="card-title fw-bold">Best Routes for Scenic Drives in Nepal</h5>
+                <p class="card-text text-muted">Discover the most beautiful and scenic driving routes across Nepal, perfect for weekend getaways and memorable journeys.</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <small class="text-muted">
+                    <i class="bi bi-calendar me-1"></i>Nov 25, 2024
+                  </small>
+                  <small class="text-muted">7 min read</small>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent">
+                <button class="btn btn-outline-primary btn-sm" onclick="readPost('scenic-routes-nepal')">Read Article</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+          <button class="btn btn-outline-primary btn-lg" onclick="loadMorePosts()">
+            <i class="bi bi-arrow-down-circle me-2"></i>Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h3 class="fw-bold mb-3">Stay Updated with Travel Tips</h3>
+            <p class="mb-4">Get the latest articles and safety tips delivered to your inbox weekly.</p>
+            <div class="input-group input-group-lg">
+              <input type="email" class="form-control" placeholder="Enter your email address" id="newsletterEmail">
+              <button class="btn btn-light" type="button" onclick="subscribeNewsletter()">
+                <i class="bi bi-send me-1"></i>Subscribe
+              </button>
+            </div>
+            <small class="d-block mt-2 text-white-50">No spam, unsubscribe anytime.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Download Modal -->
+  <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="downloadModalLabel">Download Mechanic Sathi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <div class="mb-4">
+            <i class="bi bi-phone" style="font-size: 3rem; color: var(--primary-color);"></i>
+          </div>
+          <h6 class="mb-3">Choose your platform:</h6>
+          <div class="d-grid gap-3">
+            <a href="#" class="btn btn-primary btn-lg" onclick="downloadApp('android')">
+              <i class="bi bi-android me-2"></i>Download for Android
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-lg" onclick="downloadApp('ios')">
+              <i class="bi bi-apple me-2"></i>Download for iOS
+            </a>
+          </div>
+          <small class="text-muted mt-3 d-block">Coming soon to both platforms!</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Modal -->
+  <div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="articleModalLabel">Article Title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="articleContent">
+          <!-- Article content will be loaded here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="shareArticle()">
+            <i class="bi bi-share me-1"></i>Share Article
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section bg-dark text-white py-5 position-relative">
+    <div class="footer-particles"></div>
+    <div class="container position-relative">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-brand mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-wrench-adjustable-circle-fill me-2 text-primary"></i>
+              Mechanic Sathi
+            </h5>
+            <p class="text-light mb-4">Your trusted companion for roadside assistance across Nepal. Built for safer journeys.</p>
+            <div class="social-links">
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-twitter"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h5 class="footer-title fw-bold mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="index.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Home
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="features.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Features
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="blogs.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-links">
+            <h5 class="footer-title fw-bold mb-4">Support</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <a href="faq.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>FAQs
+                </a>
+              </li>
+              <li class="mb-3">
+                <a href="contact.html" class="footer-link">
+                  <i class="bi bi-chevron-right me-2"></i>Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact">
+            <h5 class="footer-title fw-bold mb-4">Get the App</h5>
+            <div class="mb-4">
+              <a href="download.html" class="btn btn-outline-light mb-2 w-100">
+                <i class="bi bi-android me-2"></i>Android App
+              </a>
+              <a href="download.html" class="btn btn-outline-light mb-3 w-100">
+                <i class="bi bi-apple me-2"></i>iOS App
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider my-4">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="footer-copyright mb-0">
+            &copy; 2025 Mechanic Sathi. 
+            <span class="text-primary">Budhanilkantha 44600, Kathmandu, Nepal.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Download Modal Functions
+    function showDownloadModal() {
+      var downloadModal = new bootstrap.Modal(document.getElementById('downloadModal'));
+      downloadModal.show();
+    }
+    
+    function downloadApp(platform) {
+      if (platform === 'android') {
+        alert('Android app will be available soon on Google Play Store!');
+      } else if (platform === 'ios') {
+        alert('iOS app will be available soon on App Store!');
+      }
+    }
+
+    // Blog Filter Functions
+    function filterPosts(category) {
+      const posts = document.querySelectorAll('.blog-post');
+      const buttons = document.querySelectorAll('.category-btn');
+      
+      // Update active button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Filter posts
+      posts.forEach(post => {
+        if (category === 'all' || post.dataset.category === category) {
+          post.style.display = 'block';
+          post.classList.add('fade-in-up');
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    }
+
+    // Article Reading Function
+    function readPost(articleId) {
+      const articles = {
+        'winter-driving': {
+          title: 'Essential Winter Driving Tips for Nepal\'s Mountain Roads',
+          content: `
+            <div class="mb-4">
+              <div class="bg-primary text-white p-3 rounded mb-3 text-center">
+                <i class="bi bi-thermometer-snow" style="font-size: 2rem;"></i>
+              </div>
+              <p>Winter driving in Nepal's mountainous terrain requires special preparation and caution. Here are essential tips to keep you safe:</p>
+              
+              <h6 class="fw-bold mt-4">1. Check Weather Conditions</h6>
+              <p>Always check weather forecasts and road conditions before starting your journey. Avoid travel during heavy snowfall or extreme cold warnings.</p>
+              
+              <h6 class="fw-bold mt-4">2. Winter Emergency Kit</h6>
+              <ul>
+                <li>Warm blankets and extra clothing</li>
+                <li>Non-perishable food and water</li>
+                <li>Flashlight and extra batteries</li>
+                <li>First aid kit</li>
+                <li>Ice scraper and snow shovel</li>
+              </ul>
+              
+              <h6 class="fw-bold mt-4">3. Vehicle Preparation</h6>
+              <p>Ensure your vehicle is winter-ready with proper tires, antifreeze, and a fully charged battery. Keep your fuel tank at least half full to prevent freezing.</p>
+              
+              <h6 class="fw-bold mt-4">4. Driving Techniques</h6>
+              <p>Drive slowly and maintain greater following distances. Use gentle acceleration and braking to avoid skidding on icy surfaces.</p>
+            </div>
+          `
+        },
+        'car-warning-signs': {
+          title: '10 Signs Your Car Needs Immediate Attention',
+          content: `
+            <div class="mb-4">
+              <div class="bg-success text-white p-3 rounded mb-3 text-center">
+                <i class="bi bi-exclamation-triangle" style="font-size: 2rem;"></i>
+              </div>
+              <p>Don't ignore these warning signs that could leave you stranded:</p>
+              
+              <h6 class="fw-bold mt-4">Warning Signs to Watch For:</h6>
+              <ol>
+                <li><strong>Strange Engine Noises</strong> - Grinding, squealing, or knocking sounds</li>
+                <li><strong>Dashboard Warning Lights</strong> - Any illuminated warning indicators</li>
+                <li><strong>Unusual Vibrations</strong> - Steering wheel or seat vibrations</li>
+                <li><strong>Fluid Leaks</strong> - Oil, coolant, or brake fluid under the car</li>
+                <li><strong>Poor Braking Performance</strong> - Spongy brakes or grinding sounds</li>
+                <li><strong>Overheating</strong> - Temperature gauge in red zone</li>
+                <li><strong>Difficulty Starting</strong> - Engine takes multiple attempts to start</li>
+                <li><strong>Unusual Exhaust Smoke</strong> - Blue, white, or excessive black smoke</li>
+                <li><strong>Steering Problems</strong> - Hard to turn or pulls to one side</li>
+                <li><strong>Tire Issues</strong> - Uneven wear, bulges, or frequent pressure loss</li>
+              </ol>
+              
+              <div class="alert alert-warning mt-4">
+                <strong>Remember:</strong> Early detection and maintenance can prevent costly repairs and dangerous breakdowns on the road.
+              </div>
+            </div>
+          `
+        },
+        'night-driving-safety': {
+          title: 'Night Driving Safety on Nepal\'s Highways',
+          content: `
+            <div class="mb-4">
+              <div class="bg-warning text-white p-3 rounded mb-3 text-center">
+                <i class="bi bi-moon" style="font-size: 2rem;"></i>
+              </div>
+              <p>Night driving in Nepal requires extra vigilance due to challenging road conditions and varying traffic patterns.</p>
+              
+              <h6 class="fw-bold mt-4">Before You Drive:</h6>
+              <ul>
+                <li>Ensure headlights and taillights are clean and working</li>
+                <li>Adjust mirrors to minimize glare</li>
+                <li>Keep windshield clean inside and out</li>
+                <li>Plan your route and inform someone of your travel plans</li>
+              </ul>
+              
+              <h6 class="fw-bold mt-4">Driving Tips:</h6>
+              <ul>
+                <li>Reduce speed and increase following distance</li>
+                <li>Use high beams when appropriate, but dim for oncoming traffic</li>
+                <li>Watch for pedestrians and animals on the road</li>
+                <li>Take breaks every 2 hours to combat fatigue</li>
+                <li>Keep emergency contacts readily available</li>
+              </ul>
+              
+              <div class="alert alert-danger mt-4">
+                <strong>Emergency:</strong> If you break down at night, turn on hazard lights, use reflective triangles, and call for help immediately.
+              </div>
+            </div>
+          `
+        }
+      };
+
+      const article = articles[articleId];
+      if (article) {
+        document.getElementById('articleModalLabel').textContent = article.title;
+        document.getElementById('articleContent').innerHTML = article.content;
+        
+        const articleModal = new bootstrap.Modal(document.getElementById('articleModal'));
+        articleModal.show();
+      } else {
+        alert('Full article coming soon! Stay tuned for detailed content.');
+      }
+    }
+
+    // Newsletter Subscription
+    function subscribeNewsletter() {
+      const email = document.getElementById('newsletterEmail').value;
+      if (email && email.includes('@')) {
+        alert('Thank you for subscribing! You\'ll receive our latest travel tips and safety guides.');
+        document.getElementById('newsletterEmail').value = '';
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    }
+
+    // Load More Posts
+    function loadMorePosts() {
+      alert('More articles are being added regularly. Check back soon for the latest travel tips and safety guides!');
+    }
+
+    // Share Article
+    function shareArticle() {
+      const title = document.getElementById('articleModalLabel').textContent;
+      const text = `Check out this helpful article: ${title} - From Mechanic Sathi Blog`;
+      
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          text: text,
+          url: window.location.href
+        });
+      } else {
+        // Fallback for browsers that don't support Web Share API
+        navigator.clipboard.writeText(`${text} - ${window.location.href}`).then(() => {
+          alert('Article link copied to clipboard!');
+        });
+      }
+    }
+  </script>
+</body>
+</html>
