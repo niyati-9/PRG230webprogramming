@@ -660,20 +660,17 @@
       const emailPreview = document.getElementById('mechanicEmailPreview').value;
       const phonePreview = document.getElementById('mechanicPhonePreview').value;
 
-      // Note: In a real implementation, you'd copy these values to hidden fields in the full form
-      // or handle the form data submission differently
     }
 
-    // Form submission handling
+
     document.querySelector('.contact-form-elegant').addEventListener('submit', function(e) {
       e.preventDefault();
-      // Add form submission logic here
+
       alert('Thank you for your message! We\'ll get back to you soon.');
     });
 
     document.querySelector('.mechanic-application-form-elegant').addEventListener('submit', function(e) {
       e.preventDefault();
-      // Copy preview data and add form submission logic here
       copyPreviewData();
       alert('Application submitted successfully! We\'ll review it within 3-5 business days.');
     });
