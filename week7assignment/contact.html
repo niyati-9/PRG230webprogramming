@@ -646,14 +646,11 @@
       
       fullForm.style.display = 'none';
       preview.style.display = 'block';
-      
-      // Smooth scroll back to the preview
       setTimeout(() => {
         preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 100);
     });
 
-    // Copy data from preview form to full form when expanding
     function copyPreviewData() {
       const firstNamePreview = document.getElementById('mechanicFirstNamePreview').value;
       const lastNamePreview = document.getElementById('mechanicLastNamePreview').value;
